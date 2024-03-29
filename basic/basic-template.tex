@@ -1,0 +1,44 @@
+%-----------------------------------------------------------------------------%
+
+% Letter class
+\documentclass[a4paper, 12pt]{letter}
+
+% Define the \section command to customize the appearance of the letter title
+\newcommand{\section}[1]{\begin{center}\Large\textbf{#1}\end{center}}
+% \newcommand{\section}[1]{\vspace{3cm}}
+% \newcommand{\section}[1]{\smallskip}
+% \newcommand{\section}[1]{}
+
+% Name of sender
+% \name{$fromname$}
+
+% Signature of sender
+\signature{$signature$}
+
+% Address of sender
+\address
+{
+    $for(fromaddress)$$fromaddress$$sep$\\$endfor$
+}
+
+%-----------------------------------------------------------------------------%
+
+\begin{document}
+
+% Name and address of receiver
+\begin{letter}{
+    $for(toaddress)$$toaddress$$sep$\\$endfor$$if(subject)$\\ ~ \\\textbf{Subject: $subject$}$endif$
+}
+% Opening statement
+\opening{$opening$}
+
+% Letter body
+$body$
+
+% Closing statement
+\longindentation=0pt
+\closing{$closing$}
+
+\end{letter}
+\end{document}
+%-----------------------------------------------------------------------------%

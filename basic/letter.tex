@@ -1,0 +1,56 @@
+%-----------------------------------------------------------------------------%
+
+% Letter class
+\documentclass[a4paper, 12pt]{letter}
+
+% Redefine the \opening command to customize the appearance of the letter title
+\newcommand{\section}[1]{\begin{center}\Large\textbf{#1}\end{center}}
+
+% Name of sender
+% \name{Frank}
+
+% Signature of sender
+% \signature{Frank}
+
+% Address of sender
+\address
+{
+    123 Street Rd\\Chicago, IL
+}
+
+%-----------------------------------------------------------------------------%
+
+\begin{document}
+
+% Name and address of receiver
+\begin{letter}
+{
+    My Home\\456 Road St.\\New York, NY
+}
+
+% Opening statement
+\opening{To whom it may concern,}
+
+% Letter body
+
+\section{Letter}\label{letter}
+
+I am writing to you on behalf of the Wikipedia project
+(http://www.wikipedia.org/), an endeavour to build a fully-fledged
+multilingual encyclopaedia in an entirely open manner, to ask for
+permission to use your copyrighted material.
+
+\section{Letter hhhh}\label{letterjhhh}
+
+I am writing to you on behalf of the Wikipedia project
+(http://www.wikipedia.org/), an endeavour to build a fully-fledged
+multilingual encyclopaedia in an entirely open manner, to ask for
+permission to use your copyrighted material.
+
+% Closing statement
+\longindentation=0pt
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}
+%-----------------------------------------------------------------------------%

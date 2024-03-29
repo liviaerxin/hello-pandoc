@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lined Cover Letter
+% LaTeX Template
+% Version 3.0 (February 14, 2023)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	12pt, % Default font size
+]{letter}
+
+\usepackage{graphicx} % Required for including images
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage[
+	a4paper, % Paper size, use letterpaper for US letter paper
+	top=1cm, % Top margin
+	bottom=1cm, % Bottom margin
+	left=1cm, % Left margin
+	right=1cm, % Right margin
+	headsep=0.8cm, % Space from the top margin to the baseline of the header
+	footskip=1.2cm, % Space from the bottom margin to the baseline of the footer
+	%showframe % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+\setlength{\parindent}{0pt} % Paragraph indentation
+\setlength{\parskip}{1em} % Vertical space between paragraphs
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+% \usepackage{XCharter} % Use the XCharter fonts
+\usepackage{stix} % Use the stix fonts
+% \usepackage{lmodern} % Use sans serif Latin Modern fonts
+
+% Define the \section command to customize the appearance of the letter title
+\newcommand{\section}[1]{\begin{center}\Large\textbf{#1}\end{center}}
+% \newcommand{\section}[1]{\vspace{3cm}}
+% \newcommand{\section}[1]{\smallskip}
+% \newcommand{\section}[1]{}
+
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty}
+\begin{document}
+
+%----------------------- YOUR NAME AND CONTACT INFORMATION -------------------------------
+\begingroup
+	\raggedleft % Right align text
+	\small % Font size
+	$for(fromaddress)$$fromaddress$$sep$\\$endfor$
+	\bigskip % Vertical whitespace
+	{\normalsize\textit{\today}}\\ % Date
+\endgroup
+%----------------------------------------------------------------------------------------
+
+%-------------------------- ADDRESSEE AND GREETING ----------------------------------
+\begingroup
+	% Name and address of the person to whom the letter is being sent
+	$for(toaddress)$$toaddress$$sep$\\$endfor$
+\endgroup
+%----------------------------------------------------------------------------------------
+
+\bigskip % Vertical whitespace
+
+% Subject
+$if(subject)$
+	\textbf{$subject$}
+$endif$
+
+\medskip % Vertical whitespace
+
+% Openings
+$opening$
+
+\smallskip % Vertical whitespace
+
+%------------------------------  LETTER CONTENT -----------------------------------------
+
+$body$
+
+%----------------------------------------------------------------------------------------
+
+\smallskip % Vertical whitespace
+
+% Closing
+$closing$
+
+% Signature
+$if(signature)$
+	\includegraphics[width=0.3\textwidth]{$signature$} % Left-aligned
+	\smallskip
+	$signaturename$
+$elseif(signaturename)$
+	\bigskip\bigskip\bigskip % Vertical whitespace
+	$signaturename$
+$endif$
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
