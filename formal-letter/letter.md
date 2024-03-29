@@ -10,7 +10,7 @@ toaddress:
     - My Home
     - 456 Road St.
     - New York, NY
-opening: To whom it may concern,
+opening: To whom it may concern ,
 closing: Sincerely,
 date: 12 December 2020
 ---

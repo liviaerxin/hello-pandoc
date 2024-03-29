@@ -1,4 +1,4 @@
-# Pandoc/Latex Template for Writing Letters in Markdow  n
+# Pandoc Latex Template for Writing Letters in Markdown
 
 The workflow for writing a letter in markdown is:
 
