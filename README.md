@@ -45,3 +45,11 @@ sudo tlmgr install collection-fontsrecommended graphicx geometry fancyhdr
 ```sh
 pandoc letter.md --template=letter_template.tex -o letter.tex
 ```
+
+## Other useful Pandoc functions
+
+Get the default LaTeX template for Markdown file,
+
+```sh
+pandoc -D latex
+```

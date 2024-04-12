@@ -1,7 +1,7 @@
 ---
 subject: Financial Support Letter
 signaturename: Frank
-signature: signature.pdf
+signature: ./signature.pdf
 fromaddress:
     - Frank
     - 123 Street Rd

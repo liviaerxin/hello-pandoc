@@ -19,7 +19,7 @@ To generate PDF letters using Markdown, I'll need to apply a custom LaTeX templa
 Generate PDF letter from markdown file, `letter.md` -> `letter.pdf`,
 
 ```sh
-pandoc letter.md --template=lined-template.tex -o letter.pdf
+pandoc invoice-letter.md --template=study-plan-template.tex -o invoice-letter.pdf
 ```
 
 Or, Use two-phase generation, `letter.md` -> `letter.tex` -> `letter.pdf`,
@@ -77,6 +77,4 @@ Available metadata:
 
 [LaTeX/Letters - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/LaTeX/Letters)
 
-[pandoc-letter/template-letter.tex at master · aaronwolen/pandoc-letter · GitHub](https://github.com/aaronwolen/pandoc-letter/blob/master/template-letter.tex)
-
-[Helpful_Lab_Materials/WritingCoverLetter/cltemplate.tex at master · Microbiology/Helpful_Lab_Materials · GitHub](https://github.com/Microbiology/Helpful_Lab_Materials/blob/master/WritingCoverLetter/cltemplate.tex)
+[Pandoc template for writing Markdown letters (DIN 5008)](https://github.com/benedictdudel/pandoc-letter-din5008)
