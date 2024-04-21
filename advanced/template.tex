@@ -1,0 +1,30 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage{longtable,booktabs,array}
+
+\begin{document}
+
+% Sender's information
+\hfill
+\begin{minipage}[t]{.2\textwidth}
+    $for(fromaddress)$$fromaddress$$sep$\\$endfor$
+\end{minipage}
+
+% Receiver's information
+\begin{minipage}{0.4\linewidth}
+\textbf{Recipient's Name} \par
+Recipient's Address \par
+City, State \par
+Postal Code
+\end{minipage}
+
+\null\hfill Yours sincerely
+
+\section{Introduction}
+Dear Sir or Madam,
+
+$body$
+
+Sincerely,
+Your Name
+\end{document}

@@ -13,21 +13,29 @@ opening: To whom it may concern,
 closing: Sincerely,
 date: 12 December 2020
 # LaTex
-documentclass: letter
+documentclass: article
 papersize: a4
 fontsize: 12pt
-header-includes:
-  - \begin{center}\Large\textbf{Header}\end{center}
-include-before:
-  - \address{$for(fromaddress)$$fromaddress$$sep$\\$endfor$}
-  - \begin{letter}{$for(toaddress)$$toaddress$$sep$\\$endfor$$if(subject)$\\ ~ \\\textbf{Subject: $subject$}$endif$}
-  - \opening{$opening$}
-include-after:
-  - \longindentation=0pt
-  - \closing{$closing$}
-  - \signature{$signature$}
-  - \end{letter}
 ---
+
+# Formal Letter
+
+I am writing to you on behalf of the Wikipedia project (http://www.wikipedia.org/),
+an endeavour to build a fully-fledged multilingual encyclopaedia in an entirely
+open manner, to ask for permission to use your copyrighted material.
+
+| Bill      | Price |
+|-----------|-------|
+| Rent      | 100   |
+| Utilities | 200   |
+
+## Paragraph One
+
+I am writing to you on behalf of the Wikipedia project (http://www.wikipedia.org/),
+an endeavour to build a fully-fledged multilingual encyclopaedia in an entirely
+open manner, to ask for permission to use your copyrighted material.
+
+## Paragraph Two
 
 I am writing to you on behalf of the Wikipedia project (http://www.wikipedia.org/),
 an endeavour to build a fully-fledged multilingual encyclopaedia in an entirely
